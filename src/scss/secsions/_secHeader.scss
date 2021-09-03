@@ -5,6 +5,9 @@ nav{
     top: 0;
     z-index: 1;
 }
+#nav-collapse{
+    justify-content: flex-end;
+}
 .bg-charcoal{
     background-color: $colorpurple !important;
 }
@@ -16,7 +19,7 @@ nav{
         font-weight: bold;
         font-family: Mogra !important;
         text-transform: uppercase;
-        text-decoration: underline;
+        text-decoration: underline !important;
         padding: 0 !important;
         &:hover{
             text-decoration: underline !important;

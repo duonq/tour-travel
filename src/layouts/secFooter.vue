@@ -24,7 +24,7 @@
               :key="contact.name"
               class="d-table mb-4 mt-2"
             >
-              <div class="footer-follow__icon d-inline-block mr-3">
+              <div class="footer-follow__icon d-inline-block">
                 <b-link :href="contact.link" target="_blank">
                   <i :class="contact.icon"></i>
                 </b-link>
@@ -36,7 +36,7 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between mt-5">
+            <div class="d-flex justify-content-between mt-5 w-75">
               <div v-for="follow in follows" :key="follow.icon" class="rounded">
                 <b-link :href="follow.link" target="_blank">
                   <i :class="follow.icon"></i>

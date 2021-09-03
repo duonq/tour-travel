@@ -24,7 +24,7 @@
             @include width-height(30px, 30px);
             background-color: $colorwhilelight;
             border-radius: 50%;
-            
+            margin-right: 15px;
             i{
                 color: $colorpurplelight;
                 @include font-size(14px, 30px);

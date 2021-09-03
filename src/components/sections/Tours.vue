@@ -10,7 +10,7 @@
         <div class="py-5">
           <b-row cols="3">
             <b-col class="my-5" v-for="tour in tours" :key="tour.p">
-              <div class="tour-list d-flex">
+              <div class="tour-list d-flex position-relative">
                 <div class="tour-list__title h-100 mb-2">
                   <div class="zoom">
                     <b-img
@@ -75,7 +75,7 @@
                         :alt="best.alt"
                       />
                     </div>
-                    <div class="d-table-cell align-top w-75 pl-3">
+                    <div class="d-table-cell align-top w-75">
                       <p>{{ best.p }}</p>
                       <ul class="d-flex star">
                         <li v-for="(star, index) in best.stars" :key="index">
