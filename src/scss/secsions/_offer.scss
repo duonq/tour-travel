@@ -1,0 +1,87 @@
+@import '../components/button';
+.offer{
+    &__title{
+        text-align: center;
+        padding-top: 107px;
+        &--size-l{
+            font-family: Averia Libre;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 43px;
+            text-transform: capitalize;
+            color: $colorOrangeYellow;
+        }
+        &--size-m{
+            font-family: Courier Prime;
+            font-size: 24px;
+            line-height: 27px;
+            max-width: 742px;
+            text-align: justify;
+            margin: 0 auto;
+            margin-top: 13px;
+            color: $colorBlack60;
+        }
+        &--size-ms{
+            font-family: Open Sans;
+            font-size: 16px;
+            line-height: 22px;
+            color: $colorBlack70;
+            max-width: 180px;
+            margin: 15px auto;
+        }
+        &--size-s{
+            font-family: Courier Prime;
+            font-size: 12px;
+            line-height: 13px;
+            align-items: center;
+            text-transform: capitalize;            
+        }
+        img:hover{
+            cursor: pointer;
+            transform: rotate(15deg);
+        }
+    }
+    &-abs{
+        bottom: 0;
+        left: 50px;
+        margin-bottom: 50px;
+    }
+
+}
+.sale{
+    &:first-child{
+        .offer{
+            &-btn{
+                background-color: #fff;
+                &:hover{
+                    color: #fff;
+                    background-color: $colorOrangeYellow;
+                }
+            }
+        }
+    }
+    &:nth-child(2){
+        .offer{
+            &-btn{
+                background-color: $colorBlueSky;
+                color: #fff;
+                &:hover{
+                    background-color: $colorblue;
+                    color: $colorDark;
+                }
+            }
+        }
+    }
+    &:nth-child(3){
+        .offer{
+            &-btn{
+                background-color: $colorOrangeYellow;
+                &:hover{
+                    background-color: $colorPink;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

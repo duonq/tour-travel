@@ -1,0 +1,45 @@
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.bg-charcoal{
+    background-color: $colorpurple !important;
+}
+.navbar{
+    padding: 0 !important;
+    height: 100px;
+    &-brand{
+        @include font-size(36px !important, 58px !important);
+        font-weight: bold;
+        font-family: Mogra !important;
+        text-transform: uppercase;
+        text-decoration: underline;
+        padding: 0 !important;
+        &:hover{
+            text-decoration: underline !important;
+        }
+    }
+
+    ul{
+        display: inline-flex;
+        list-style-type: none;
+    }
+    li{
+        font-family: Open Sans;
+        font-weight: bold;
+        @include font-size(18px, 28px);
+        text-transform: uppercase;
+        padding: 0 15px;
+        a{
+            color: #fff;
+            &:hover{
+                color: cornflowerblue;
+            }
+        }
+    }
+}
+
+

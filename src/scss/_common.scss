@@ -1,0 +1,48 @@
+.bg-page{
+    background-color: $colorBg;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+h2{
+    font-family: Courier Prime;
+    font-weight: bold !important;
+    @include font-size(64px !important, 72px !important);
+    text-align: center;
+    text-transform: capitalize;
+    color: $colorDark;
+}
+h3{
+    font-family: Courier Prime;
+    font-weight: bold !important;
+    @include font-size(36px !important, 40px !important);
+    align-items: center;
+    text-transform: capitalize;
+    color: #000;
+}
+h4{
+    font-family: Courier Prime;
+    font-weight: bold !important;
+    @include font-size(26px !important, 28px !important);
+    text-transform: capitalize;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;    
+    max-width: 174px;
+}
+h5{
+    font-family: Open Sans;
+    font-weight: 700 !important;
+    @include font-size(24px !important, 33px !important);
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 58px !important;
+}
+h6{
+    // font-family: Open Sans;
+    font-weight: bold !important;
+    @include font-size(22px !important, 30px !important);
+    text-transform: capitalize;
+    color: $colorBlack70;
+    margin-top: 13px !important;
+}

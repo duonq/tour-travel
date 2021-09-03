@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@490;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Mogra&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.container{
+    padding: 0 !important;
+}
+
+.zoom{
+    overflow: hidden;
+    display: block;
+}
+.zoom img{
+    transition: .5s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+
+//mixin
+@mixin d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin max-width-height($width, $height) {
+    max-width: $width;
+    max-height: $height;
+}
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin font-size($size, $line) {
+    font-size: $size;
+    line-height: $line;
+}
+//color
+
+$colorBlack70: rgba(0, 0, 0, 0.7);
+$colorBlack60: rgba(0, 0, 0, 0.6);
+$colorBlack50: rgba(0, 0, 0, 0.5);
+$colorpurple: #6078AB;
+$colorpurple90: rgba(119, 134, 167, 0.9);
+$colorpurplelight: rgba(96, 120, 171, 0.5);
+$colorwhilelight: #E5E5E5;
+$colorlightblue:#78E4F2;
+$colorblue:#3C90B8;
+$colorBlueSky: #47A0FF;
+$colorred: #E26D5F;
+$colorreddark: #D14D54;
+$colorPink: #DD8E99;
+$colorBg: #F9F4F0;
+$colorOrangeYellow: #F8A323;
+$colorOrange: #E88750;
+$colorDark: #3C3737;
+
