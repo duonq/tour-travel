@@ -9,7 +9,19 @@
 
         <div class="py-5">
           <b-row cols="3">
-            <b-col class="my-5" v-for="tour in tours" :key="tour.p">
+            <b-col class="my-5" v-for="tour in tours" :key="tour.id">
+              <!-- <new-item-tour
+                :pic="tour.pic"
+                :alt="tour.alt"
+                :map="tour.map"
+                :name="tour.p"
+                :price="tour.price"
+                :calendar="tour.calendar"
+                :day="tour.day"
+                :user="tour.user"
+                :people="tour.people"
+              /> -->
+
               <div class="tour-list d-flex position-relative">
                 <div class="tour-list__title h-100 mb-2">
                   <div class="zoom">
@@ -66,7 +78,16 @@
             <h3>Best Price</h3>
             <hr />
             <b-row cols="2">
-              <router-link to="/" v-for="best in bests" :key="best.img">
+              <div v-for="best in bests" :key="best.id">
+                <news-item
+                  :img="best.img"
+                  :p="best.p"
+                  :price="best.price"
+                  :icon="best.icon"
+                />
+              </div>
+
+              <!-- <router-link to="/" v-for="best in bests" :key="best.img">
                 <div class="tour-info">
                   <div class="d-table mt-3 h-100">
                     <div class="zoom d-block">
@@ -87,7 +108,7 @@
                   </div>
                   <hr />
                 </div>
-              </router-link>
+              </router-link> -->
             </b-row>
           </b-col>
 
@@ -100,7 +121,23 @@
                 <h3>Happy Holiday!</h3>
                 <h3>myTour.</h3>
                 <p>5% bonus on all booking</p>
-                <router-link to="/" class="book-btn btn">Booking now -></router-link>
+                <router-link to="/" class="book-btn btn"
+                  >Booking now ->
+                </router-link>
+              </div>
+            </div>
+
+            <div class="position-relative mt-5 px-3 tour-mobi">
+              <div class="zoom">
+                <img :src="require('@/assets/tours (13).png')" alt="" />
+              </div>
+              <div class="position-absolute">
+                <h3>Happy Holiday!</h3>
+                <h3>myTour.</h3>
+                <p>5% bonus on all booking</p>
+                <router-link to="/" class="book-btn btn"
+                  >Booking now ->
+                </router-link>
               </div>
             </div>
           </b-col>
@@ -111,11 +148,19 @@
 </template>
 
 <script>
+// import NewItemTour from "../News/NewItemTour.vue";
+import NewsItem from "../News/NewsItem.vue";
 export default {
+  name: "listItemTour",
+  components: {
+    NewsItem,
+    // NewItemTour,
+  },
   data() {
     return {
       tours: [
         {
+          id: 1,
           pic: "tours (7).png",
           calendar: "fa fa-calendar",
           day: "4 days",
@@ -133,6 +178,7 @@ export default {
           price: "$160",
         },
         {
+          id: 2,
           pic: "tours (8).png",
           atl: "Sapa",
           calendar: "fa fa-calendar",
@@ -151,6 +197,7 @@ export default {
           price: "$170",
         },
         {
+          id: 3,
           pic: "tours (9).png",
           atl: "Thap Ba",
           calendar: "fa fa-calendar",
@@ -168,6 +215,7 @@ export default {
           price: "$159",
         },
         {
+          id: 4,
           pic: "tours (10).png",
           atl: "Hoi An",
           calendar: "fa fa-calendar",
@@ -186,6 +234,7 @@ export default {
           price: "$190",
         },
         {
+          id: 5,
           pic: "tours (11).png",
           atl: "Phu Quoc island",
           calendar: "fa fa-calendar",
@@ -204,6 +253,7 @@ export default {
           price: "$275",
         },
         {
+          id: 6,
           pic: "tours (12).png",
           calendar: "fa fa-calendar",
           day: "6 days",
@@ -224,76 +274,82 @@ export default {
       ],
       bests: [
         {
+          id: 1,
           img: "tours (6).png",
           atl: "Mu cang chai",
           p: "Mu Cang Chai rice terraces.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$79",
         },
         {
+          id: 2,
           img: "tours (5).png",
           atl: "Moc Chau",
           p: "Moc Chau tourism, Son La.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$59",
         },
         {
+          id: 3,
           img: "tours (4).png",
           atl: "Bản Cat Cat",
           p: "Sand Sand Ban, Lao Cai.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$87",
         },
         {
+          id: 4,
           img: "tours (3).png",
           atl: "Tam Dao",
           p: "Tam Dao, Vinh Phuc Tourism.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$109",
         },
         {
+          id: 5,
           img: "tours (2).png",
           atl: "Ba Vi",
           p: "Ba Vi National Park Tourism.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$125",
         },
         {
+          id: 6,
           img: "tours (1).png",
           atl: "Ban Gioc",
           p: "Ban Gioc waterfall tour, Cao Bang.",
-          stars: [
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-            { icon: "fa fa-star" },
-          ],
+          // stars: [
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          //   { icon: "fa fa-star" },
+          // ],
           price: "$100",
         },
       ],

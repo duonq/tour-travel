@@ -41,6 +41,7 @@
 }
 //color
 
+$colorBlack80: rgba(0, 0, 0, 0.8);
 $colorBlack70: rgba(0, 0, 0, 0.7);
 $colorBlack60: rgba(0, 0, 0, 0.6);
 $colorBlack50: rgba(0, 0, 0, 0.5);
@@ -58,4 +59,82 @@ $colorBg: #F9F4F0;
 $colorOrangeYellow: #F8A323;
 $colorOrange: #E88750;
 $colorDark: #3C3737;
+
+
+
+//respon
+// $res_359 : "only screen and (max-width: 360px)";
+// $res_360 : "only screen and (min-width: 361px) and (max-width: 767px)";
+// $res_768 : "only screen and (min-width: 768px) and (max-width: 1023px)";
+// $res_1024 : "only screen and (min-width: 1024px) and (max-width: 1170px)";
+
+// @mixin responsive_359() {
+//     @media #{$res_359} {
+//         @content;
+//     }
+// }
+// @mixin responsive_360() {
+//     @media #{$res_360} {
+//         @content;
+//     }
+// }
+// @mixin responsive_768() {
+//     @media #{$res_768} {
+//         @content;
+//     }
+// }
+// @mixin responsive_1024() {
+//     @media #{$res_1024} {
+//         @content;
+//     }
+// }
+
+$res_320 : "only screen and (max-width: 320px)";
+$res_600 : "only screen and (min-width: 321px) and (max-width: 600px)";
+$res_960 : "only screen and (min-width: 601px) and (max-width: 960px)";
+$res_1264 : "only screen and (min-width: 961px) and (max-width: 1264px)";
+$res_1440 : "only screen (min-width: 1264px)";
+
+@mixin res_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+@mixin res_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@mixin res_960() {
+    @media #{$res_960} {
+        @content;
+    }
+}
+@mixin res_1264() {
+    @media #{$res_1264} {
+        @content;
+    }
+}
+@mixin res_1440() {
+    @media #{$res_1440} {
+        @content;
+    }
+}
+
+
+
+
+
+// @include res_320{
+
+// }
+// @include res_600{
+    
+// }
+// @include res_960{
+    
+// }
+// @include res_1264{
+    
+// }
 

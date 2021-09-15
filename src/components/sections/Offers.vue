@@ -57,6 +57,7 @@
 
 <script>
 export default {
+  name: "offers",
   data() {
     return {
       pictures: [
@@ -126,4 +127,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+img {
+  width: auto !important;
+}
+</style>

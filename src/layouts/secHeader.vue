@@ -8,7 +8,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <ul class="ml-auto">
           <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/tour">Tour</router-link></li>
+          <li><router-link to="/tours">Tour</router-link></li>
           <li><router-link to="/about">About</router-link></li>
           <li><router-link to="/contact">Contact</router-link></li>
           <li><router-link to="/blog">Blog</router-link></li>

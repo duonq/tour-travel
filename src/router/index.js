@@ -12,9 +12,16 @@ const routes = [
     component: Home,
   },
   {
-    path: "/tour",
-    name: "Tour",
-    component: () => import("../views/Tour.vue"),
+    path: "/tours",
+    name: "Tours",
+    component: () => import("../views/Tours.vue"),
+    children: [
+      {
+        path: 'tour-detail',
+        name: 'tour-detail',
+        component: () => import('../components/sections/TourDetail.vue')
+      },
+    ]
   },
   {
     path: "/about",

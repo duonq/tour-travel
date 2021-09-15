@@ -48,7 +48,7 @@
         <b-col>
           <div class="footer__ins">
             <h5>Instagram</h5>
-            <b-row cols="3 mx-auto pr-0">
+            <b-row cols="3 mx-auto">
               <b-col v-for="img in images" :key="img.picture" class="pb-4">
                 <!-- <b-img :src="require('@/assets/sport3.png')" /> -->
                 <div class="zoom">
@@ -77,7 +77,7 @@ export default {
         {
           title: "Tours",
           route: {
-            name: "Tour",
+            name: "Tours",
           },
         },
         {

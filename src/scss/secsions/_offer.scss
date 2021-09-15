@@ -85,3 +85,130 @@
         }
     }
 }
+
+
+// ================res================
+@include res_320{
+    .offer{
+        &__title{
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+            &--size-m{
+                @include font-size(14px, 24px);
+            }
+            &--size-l{
+                @include font-size(16px, 20px);
+            }
+        }
+        .sale{
+            width: 100%;
+            margin: 0 auto 30px;
+            max-width: 75%;
+        }
+        &-abs{
+            margin-bottom: 10px;
+        }
+        .text-center{
+            
+            a:first-child{
+                margin-bottom: 1rem !important;
+            }
+            a:nth-child(2){
+                margin-top: 0 !important;
+            }
+            img{
+                width: 40%;
+            }
+            p{
+                display: none;
+            }
+        }
+        .row-cols-4{
+            margin: 0 auto;
+            .col{
+                width: 50% !important;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+@include res_600{
+    .offer{
+        &__title{
+            padding-top: 50px;
+            &--size-l{
+                font-size: 20px;
+                line-height: 30px;
+            }
+            &--size-m{
+                font-size: 15px;
+                max-width: 360px;
+            }
+            &--size-ms{
+                font-size: 10px;
+                margin-top: 0;
+            }
+        }
+        
+        .sale{
+            width: 100%;
+            margin: 0 auto 30px;
+            max-width: 75%;
+        }
+        &-abs{
+            margin-bottom: 30px;
+        }
+        .row{
+            margin: 0;
+        }
+        
+        .my-5{
+            margin-bottom: 0 !important;
+        }
+        .text-center{
+            
+            a:first-child{
+                margin-bottom: 1rem !important;
+            }
+            a:nth-child(2){
+                margin-top: 0 !important;
+            }
+            img{
+                width: 40%;
+            }
+            p{
+                display: none;
+            }
+        }
+        .btn-sign{
+            font-size: 20px !important;
+        }
+        h6{
+            font-size: 12px !important;
+            line-height: 20px !important;
+        }
+    }
+}
+@include res_960{
+    .offer{
+        &__title{
+            padding-top: 50px;
+            &--size-l{
+                font-size: 28px;
+            }
+            &--size-m{
+                font-size: 20px;
+                max-width: 560px;
+            }
+        }
+        &-abs {
+            bottom: 0;
+            left: 35px;
+            margin-bottom: 10px;
+        }
+    }
+}
+@include res_1264{
+    
+}
