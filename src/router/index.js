@@ -14,12 +14,12 @@ const routes = [
   {
     path: "/tours",
     name: "Tours",
-    component: () => import("../views/Tours.vue"),
+    component: () => import("../views/tour/Tours.vue"),
     children: [
       {
         path: 'tour-detail',
         name: 'tour-detail',
-        component: () => import('../components/sections/TourDetail.vue')
+        component: () => import('../views/tour/TourDetail.vue')
       },
     ]
   },
@@ -27,13 +27,13 @@ const routes = [
     path: "/about",
     name: "About",
 
-    component: () => import("../views/About.vue"),
+    component: () => import("../views/about/About.vue"),
   },
   {
     path: "/contact",
     name: "Contact",
 
-    component: () => import("../views/Contact.vue"),
+    component: () => import("../views/contract/Contact.vue"),
   },
   {
     path: "/blog",

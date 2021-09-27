@@ -1,47 +1,49 @@
 <template>
-  <div class="tour-list d-flex position-relative">
-    <div class="tour-list__title h-100 mb-2">
-      <div class="zoom">
-        <b-img
-          :src="require(`@/assets/${pic}`)"
-          :alt="atl"
-          class="position-relative"
-        />
+  <router-link :to="linkDetail">
+    <div class="tour-list d-flex position-relative">
+      <div class="tour-list__title h-100 mb-2">
+        <div class="zoom">
+          <b-img
+            :src="require(`@/assets/${pic}`)"
+            :alt="alt"
+            class="position-relative"
+          />
+        </div>
+        <div class="d-flex mt-5 px-3">
+          <i :class="map"></i>
+          <p>{{ p }}</p>
+        </div>
       </div>
-      <div class="d-flex mt-5 px-3">
-        <i :class="map"></i>
-        <p>{{ name }}</p>
-      </div>
-    </div>
 
-    <hr class="mt-3 mx-auto" />
+      <hr class="mt-3 mx-auto" />
 
-    <div class="d-flex justify-content-between px-3 my-3">
-      <p class="tour-list-price">
-        From <br />
-        <span>{{ price }}</span>
-      </p>
-      <router-link to="/" class="next-btn">Explore -></router-link>
-    </div>
-
-    <div class="position-absolute tour-list__abs">
-      <div class="d-flex">
-        <p class="px-3">
-          <i :class="calendar"></i>
-          {{ day }}
+      <div class="d-flex justify-content-between px-3 my-3">
+        <p class="tour-list-price">
+          From <br />
+          <span>{{ price }}</span>
         </p>
-        <p class="px-1">
-          <i :class="user"></i>
-          {{ people }}
-        </p>
+        <router-link to="/tours/tour-detail" class="next-btn">Explore -></router-link>
       </div>
-      <ul class="star d-flex px-3">
-        <li v-for="(star, index) in stars" :key="index">
-          <i :class="star.icon"></i>
-        </li>
-      </ul>
+
+      <div class="position-absolute tour-list__abs">
+        <div class="d-flex">
+          <p class="px-3">
+            <i :class="calendar"></i>
+            {{ day }}
+          </p>
+          <p class="px-1">
+            <i :class="user"></i>
+            {{ people }}
+          </p>
+        </div>
+        <ul class="star d-flex px-3">
+          <li v-for="(star, index) in stars" :key="index">
+            <i :class="star.icon"></i>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -54,7 +56,7 @@ export default {
       default: "",
     },
     pic: String,
-    name: {
+    p: {
       type: String,
       default: "",
     },
@@ -68,7 +70,7 @@ export default {
       type: String,
       default: "",
     },
-    people: Number,
+    people: [Number, String],
     user: {
       type: String,
       default: "",
@@ -87,10 +89,24 @@ export default {
         { icon: "fa fa-star" },
         { icon: "fa fa-star" },
       ],
+      linkDetail: '/tours/tour-detail?id=' + this.id
     };
   },
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+@import "@/scss/style.scss";
+.tour{
+  &-list{
+    &__title{
+      p{
+        color: black !important;
+        &:hover{
+          opacity: 0.7 !important;
+        }
+      }
+    }
+  }
+}
 </style>

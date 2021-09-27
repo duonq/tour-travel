@@ -10,19 +10,20 @@
         <div class="py-5">
           <b-row cols="3">
             <b-col class="my-5" v-for="tour in tours" :key="tour.id">
-              <!-- <new-item-tour
+              <new-item-tour
+                :id="tour.id"
                 :pic="tour.pic"
                 :alt="tour.alt"
                 :map="tour.map"
-                :name="tour.p"
+                :p="tour.p"
                 :price="tour.price"
                 :calendar="tour.calendar"
                 :day="tour.day"
                 :user="tour.user"
                 :people="tour.people"
-              /> -->
+              />
 
-              <div class="tour-list d-flex position-relative">
+              <!-- <div class="tour-list d-flex position-relative">
                 <div class="tour-list__title h-100 mb-2">
                   <div class="zoom">
                     <b-img
@@ -64,7 +65,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </b-col>
           </b-row>
         </div>
@@ -148,13 +149,13 @@
 </template>
 
 <script>
-// import NewItemTour from "../News/NewItemTour.vue";
+import NewItemTour from "../News/NewItemTour.vue";
 import NewsItem from "../News/NewsItem.vue";
 export default {
   name: "listItemTour",
   components: {
     NewsItem,
-    // NewItemTour,
+    NewItemTour,
   },
   data() {
     return {

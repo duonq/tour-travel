@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SlideImg from "./NewItemImg.vue";
+import SlideImg from "@/components/carousel/NewItemImg.vue";
 
 export default {
   name: "slide-tour",

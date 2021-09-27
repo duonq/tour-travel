@@ -1,11 +1,9 @@
 <template>
   <div class="container offer">
-    <!-- <div class="offer"> -->
     <div class="offer__title">
       <p class="offer__title--size-l">Don’t miss</p>
       <h2>Special Offers</h2>
     </div>
-    <!-- </div> -->
 
     <b-row cols="3 my-5">
       <b-col

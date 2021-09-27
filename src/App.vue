@@ -14,6 +14,11 @@ export default {
     secHeader,
     secFooter,
   },
+  computed: {
+    key() {
+      return this.$route.path;
+    },
+  },
 };
 </script>
 <style lang="scss">

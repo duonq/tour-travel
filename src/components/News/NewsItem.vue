@@ -56,22 +56,22 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/scss/style.scss";
-.tour-info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  .d-table-cell {
-    padding-left: 15px;
-  }
-  p {
-    font-family: Courier Prime;
-    @include font-size(16px, 18px);
-    color: #000;
-    &:nth-child(3) {
-      color: $colorOrange !important;
-      font-weight: bold;
-    }
-  }
-}
+// @import "@/scss/style.scss";
+// .tour-info {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100%;
+//   .d-table-cell {
+//     padding-left: 15px;
+//   }
+//   p {
+//     font-family: Courier Prime;
+//     @include font-size(16px, 18px);
+//     color: #000;
+//     &:nth-child(3) {
+//       color: $colorOrange !important;
+//       font-weight: bold;
+//     }
+//   }
+// }
 </style>
