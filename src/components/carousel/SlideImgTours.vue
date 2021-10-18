@@ -19,7 +19,7 @@
 import SlideImg from "@/components/carousel/NewItemImg.vue";
 
 export default {
-  name: "slide-tour",
+  name: "slideImgTour",
   components: { SlideImg },
   data() {
     return {

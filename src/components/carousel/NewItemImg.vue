@@ -1,5 +1,9 @@
 <template>
-  <b-carousel-slide :caption="caption" :img-src="require(`@/assets/${urlImg}`)">
+  <b-carousel-slide
+    :caption="caption"
+    :text="text"
+    :img-src="require(`@/assets/${urlImg}`)"
+  >
   </b-carousel-slide>
 </template>
 
@@ -9,6 +13,7 @@ export default {
   props: {
     urlImg: String,
     caption: String,
+    text: String,
   },
 };
 </script>
@@ -16,10 +21,18 @@ export default {
 <style lang="scss">
 .carousel-caption {
   text-align: left !important;
-  text-decoration: underline;
   h3 {
     color: #fff !important;
     text-transform: uppercase !important;
+    text-decoration: underline;
+    font-weight: 500 !important;
+  }
+  p {
+    text-decoration: none;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    font-family: Courier Prime;
+    font-weight: 400 !important;
   }
 }
 </style>>

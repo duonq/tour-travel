@@ -4,7 +4,12 @@
 .bg-white{
     background-color: #fff;
 }
-
+.bg-f6{
+    background-color: $colorBg_f6;
+}
+.text-justify{
+    text-align: justify !important;
+}
 h2{
     font-family: Courier Prime;
     font-weight: bold !important;

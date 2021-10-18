@@ -11,6 +11,7 @@
       v-for="banner in banners"
       :key="banner.img"
       :caption="banner.caption"
+      :text="banner.text"
       :urlImg="banner.img"
     />
   </b-carousel>
@@ -20,11 +21,17 @@
 import NewItemImg from "./NewItemImg.vue";
 
 export default {
-  name: "slide-tour",
+  name: "slideImgContract",
   components: { NewItemImg },
   data() {
     return {
-      banners: [{ img: "img-slide.png", caption: "Contract us" }],
+      banners: [
+        {
+          img: "img-slide.png",
+          caption: "Contract us",
+          text: " We would love to hear from you",
+        },
+      ],
     };
   },
 };
