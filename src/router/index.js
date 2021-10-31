@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import NotFound from "../views/404.vue";
+import Home from "../views/HomePage/Home.vue";
+// import PageTour from "../views/TourPage/PageTour.vue";
+// import NotFound from "../views/404.vue";
 
 Vue.use(VueRouter);
 
@@ -11,50 +12,51 @@ const routes = [
     name: "Home",
     component: Home,
   },
+
   {
     path: "/tours",
-    name: "Tours",
-    component: () => import("../views/tour/Tours.vue"),
-    children: [
-      {
-        path: 'tour-detail',
-        name: 'tour-detail',
-        component: () => import('../views/tour/TourDetail.vue')
-      },
-    ]
+    name: "PageTour",
+    component: () => import("../views/TourPage/PageTour.vue"),
+    // children: [
+    //   {
+    //     path: 'tour-detail',
+    //     name: 'tour-detail',
+    //     component: () => import('../views/tour/TourDetail.vue')
+    //   },
+    // ]
   },
   {
     path: "/about",
     name: "About",
 
-    component: () => import("../views/about/About.vue"),
+    component: () => import("../views/AboutPage/About.vue"),
   },
   {
     path: "/contact",
     name: "Contact",
 
-    component: () => import("../views/contract/Contact.vue"),
+    component: () => import("../views/ContactPage/Contact.vue"),
   },
   {
     path: "/blog",
     name: "Blog",
 
-    component: () => import("../views/Blog.vue"),
+    component: () => import("../views/BlogPage/Blog.vue"),
   },
-  {
-    path: "/login",
-    name: "SignIn",
-    component: () => import("../components/login/SignIn.vue"),
-  },
-  {
-    path: "/register",
-    name: "Register",
-    component: () => import("../components/login/Register.vue"),
-  },
-  {
-    path: "*",
-    component: NotFound,
-  },
+  // {
+  //   path: "/login",
+  //   name: "SignIn",
+  //   component: () => import("../components/login/SignIn.vue"),
+  // },
+  // {
+  //   path: "/register",
+  //   name: "Register",
+  //   component: () => import("../components/login/Register.vue"),
+  // },
+  // {
+  //   path: "*",
+  //   component: NotFound,
+  // },
 ];
 
 const router = new VueRouter({

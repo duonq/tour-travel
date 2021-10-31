@@ -14,7 +14,8 @@
     overflow: hidden;
     display: block;
 }
-.zoom img{
+.zoom img,
+.zoom div{
     transition: .5s ease;
     &:hover{
         cursor: pointer;

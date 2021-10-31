@@ -1,0 +1,148 @@
+.footer{
+    background-color: $colorpurple90;
+    &-title{
+        font-family: Courier Prime;
+        @include font-size(16px, 26px);
+        color: #FFFFFF;
+    }
+    &-link{
+        margin-top: 32px;
+        list-style-type: none;
+    }
+    a{
+        color: #fff !important;
+        font-family: Courier Prime;
+        @include font-size(18px, 26px);
+        align-items: center;
+        &:hover{
+            color: #ceeffb !important
+        }
+    }
+    &-follow{
+        &__icon{
+            @include width-height(30px, 30px);
+            background-color: $colorwhilelight;
+            border-radius: 50%;
+            margin-right: 15px;
+            i{
+                color: $colorpurplelight;
+                @include font-size(14px, 30px);
+                text-align: center;
+                width: 100%;
+            }
+            :hover{
+                border-radius: 50%;
+                height: 100%;
+                background-color: $colorpurple;
+                i{
+                    color: $colorOrangeYellow;
+                }
+                
+            }
+        }
+        &__name{
+            margin-left: 25px;
+        }
+        .rounded{
+            @include width-height(35px, 35px);
+            background-color: $colorpurple;
+            transition: 0.3s ease;
+            margin-right: 10px;
+            &:hover{
+                margin-top: -5px;
+            }
+            &:nth-child(2){
+                background-color: $colorlightblue;
+            }
+            &:nth-child(3){
+                background-color: $colorred;
+            }
+            &:nth-child(4){
+                background-color: $colorreddark;
+            }
+            &:nth-child(5){
+                background-color: $colorblue;
+            }
+            i{
+                @include font-size(16px, 35px);
+                text-align: center;
+                width: 100%;
+            }
+            
+        }
+    }
+    
+}
+.bv-example-row{
+    padding: 50px 0 150px !important;
+}
+
+
+// ==========respo========================
+
+@include res_320{
+    .footer{
+        .container{
+            max-width: 80%;
+        }
+        h5{
+            margin-bottom: 25px !important;
+        }
+        .row-cols-3 > .col{
+            width: 100%;
+            margin-top: 50px;
+        }
+        &__ins{
+            .col{
+                width: calc(100%/3) !important;
+                margin-top: 0 !important;
+            }
+        }
+        &-title{
+            text-align: justify !important;
+        }
+        p, a{
+            font-size: 15px;
+        }
+    }
+}
+@include res_600{
+    .footer{
+        .container{
+            max-width: 80%;
+        }
+        h5{
+            margin-bottom: 25px !important;
+        }
+        .row-cols-3 > .col{
+            width: 100%;
+            margin-top: 50px;
+        }
+        &__ins{
+            .col{
+                width: calc(100%/3) !important;
+                margin-top: 0 !important;
+            }
+        }
+        
+    }
+    
+}
+@include res_960{
+    .footer{
+        &-follow{
+            h5{
+                margin-bottom: 45px !important;
+            }
+            .mb-4{
+                margin-bottom: 0.5rem !important;
+            }
+        }
+        p, a{
+            font-size: 14px;
+        }
+    }
+}
+@include res_1264{
+    
+}

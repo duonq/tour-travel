@@ -10,6 +10,27 @@
 .text-justify{
     text-align: justify !important;
 }
+.position-relative{
+    position: relative !important;
+}
+.position-absolute{
+    position: absolute !important;
+}
+.w-20{
+    width: 20%;
+}
+.w-25{
+    width: 25%;
+}
+.w-75{
+    width: 75%;
+}
+.w-50{
+    width: 50%;
+}
+.h-100{
+    height: 100%;
+}
 h2{
     font-family: Courier Prime;
     font-weight: bold !important;
@@ -52,7 +73,9 @@ h6{
     margin-top: 13px !important;
 }
 
-
+.w-75{
+    width: 75%;
+}
 
 @include res_320{
  h2{

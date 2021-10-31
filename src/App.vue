@@ -1,26 +1,21 @@
 <template>
-  <div id="app">
-    <sec-header />
+  <v-app>
+    <main-header></main-header>
     <router-view />
-    <sec-footer />
-  </div>
+    <main-footer></main-footer>
+  </v-app>
 </template>
 
 <script>
-import secHeader from "./layouts/secHeader";
-import secFooter from "./layouts/secFooter.vue";
+import MainFooter from "./layouts/MainFooter.vue";
+import MainHeader from "./layouts/MainHeader.vue";
 export default {
-  components: {
-    secHeader,
-    secFooter,
-  },
-  computed: {
-    key() {
-      return this.$route.path;
-    },
-  },
+  components: { MainHeader, MainFooter },
+  name: "App",
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-<style lang="scss">
-@import "@/scss/style.scss";
-</style>
+
