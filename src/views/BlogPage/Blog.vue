@@ -70,23 +70,12 @@
               <div class="borderbottom"></div>
               <h6 class="text-center py-3">Tags</h6>
               <v-divider class="mx-4"></v-divider>
-              <div class="mx-5 px-5 py-3">
-                <div
-                  v-for="item in blogViews"
-                  :key="item.name"
-                  class="d-table mb-4 mt-2"
-                >
-                  <div class="blog-follow__icon d-inline-block">
-                    <a :href="item.link" target="_blank">
-                      <i :class="item.icon"></i>
-                    </a>
-                  </div>
-                  <div class="blog-follow__name d-table-cell">
-                    <a :href="item.link" target="_blank">
-                      {{ item.name }}
-                    </a>
-                  </div>
-                </div>
+              <div class="mx-5 px-5 py-5">
+                <v-chip-group active-class="primary--text" column>
+                  <v-chip v-for="tag in tags" :key="tag">
+                    {{ tag }}
+                  </v-chip>
+                </v-chip-group>
               </div>
             </div>
           </v-card>
@@ -101,6 +90,17 @@ export default {
   name: "Blog",
   data() {
     return {
+      tags: [
+        "Sea",
+        "Vacation",
+        "Beach",
+        "Nature",
+        "Photos",
+        "fruits",
+        "parachute",
+        "Mountain",
+        "Cave",
+      ],
       banners: [
         {
           img: "slide_img_blog.png",
@@ -284,6 +284,11 @@ export default {
         color: $colorBlack50 !important;
       }
     }
+  }
+}
+::v-deep {
+  .v-slide-group__wrapper {
+    height: auto !important;
   }
 }
 </style>

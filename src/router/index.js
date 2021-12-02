@@ -15,15 +15,19 @@ const routes = [
 
   {
     path: "/tours",
-    name: "PageTour",
-    component: () => import("../views/TourPage/PageTour.vue"),
-    // children: [
-    //   {
-    //     path: 'tour-detail',
-    //     name: 'tour-detail',
-    //     component: () => import('../views/tour/TourDetail.vue')
-    //   },
-    // ]
+    component: { render: c => c('router-view') },
+    children: [
+      {
+        path: '',
+        name: "PageTour",
+        component: () => import("../views/TourPage/PageTour.vue"),
+      },
+      {
+        path: ':tour-detail',
+        name: 'tour-detail',
+        component: () => import('../views/TourPage/TourDetail.vue')
+      },
+    ]
   },
   {
     path: "/about",
@@ -43,15 +47,15 @@ const routes = [
 
     component: () => import("../views/BlogPage/Blog.vue"),
   },
-  // {
-  //   path: "/login",
-  //   name: "SignIn",
-  //   component: () => import("../components/login/SignIn.vue"),
-  // },
+  {
+    path: "/login",
+    name: "SignIn",
+    component: () => import("../views/Login/SignIn"),
+  },
   // {
   //   path: "/register",
   //   name: "Register",
-  //   component: () => import("../components/login/Register.vue"),
+  //   component: () => import("../views/Login/Register"),
   // },
   // {
   //   path: "*",

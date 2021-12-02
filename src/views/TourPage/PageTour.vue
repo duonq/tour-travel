@@ -5,6 +5,59 @@
         ><v-img :src="require(`@/assets/${banner.pic}`)"
       /></v-carousel-item>
     </v-carousel>
+    <div class="mx-16 mt-16">
+      <v-row class="w-80 mx-auto bg-search px-5">
+        <v-col cols="3">
+          <v-select
+            v-model="chosePlace"
+            :items="listPlace"
+            prepend-icon="mdi-map-marker"
+            menu-props="auto"
+            hide-details
+            label="Where are you going?"
+            single-line
+          ></v-select>
+        </v-col>
+        <v-col cols="3">
+          <v-menu
+            ref="menu"
+            v-model="menu"
+            :close-on-content-click="false"
+            :return-value.sync="date"
+            transition="scale-transition"
+            offset-y
+            min-width="auto"
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-text-field
+                v-model="date"
+                label="Time"
+                prepend-icon="mdi-calendar"
+                readonly
+                v-bind="attrs"
+                v-on="on"
+              ></v-text-field>
+            </template>
+            <v-date-picker v-model="date" no-title scrollable>
+              <v-spacer></v-spacer>
+              <v-btn text color="primary" @click="menu = false"> Cancel </v-btn>
+              <v-btn text color="primary" @click="$refs.menu.save(date)">
+                OK
+              </v-btn>
+            </v-date-picker>
+          </v-menu>
+        </v-col>
+        <v-col cols="6">
+          <v-text-field
+            v-model="searchText"
+            append-icon="mdi-magnify"
+            label="search"
+            single-line
+            hide-details
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </div>
     <div class="offer__title">
       <p class="offer__title--size-l">Let’s go</p>
       <h2>Destinations</h2>
@@ -38,6 +91,15 @@ export default {
   components: { NewItemTour },
   data() {
     return {
+      searchText: "",
+      chosePlace: "",
+      listPlace: ["Miền Bắc", "Miền Trung", "Miền Nam"],
+      date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+        .toISOString()
+        .substr(0, 10),
+      menu: false,
+      modal: false,
+      menu2: false,
       banners: [
         { pic: "baner_tuor(1).png" },
         { pic: "baner_tuor(2).png" },
@@ -219,4 +281,24 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.w-80 {
+  width: 80%;
+}
+.bg-search {
+  background: lightblue;
+  border-radius: 30px !important;
+}
+::v-deep {
+  // .v-text-field > .v-input__control > .v-input__slot:after,
+  // .v-text-field > .v-input__control > .v-input__slot:before {
+  //   border-width: 0 !important;
+  // }
+  .v-input {
+    // max-width: 80%;
+    &__prepend-outer {
+      margin-right: 15px !important;
+    }
+  }
+}
+</style>

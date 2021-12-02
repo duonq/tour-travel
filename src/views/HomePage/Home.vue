@@ -125,7 +125,7 @@ export default {
         {
           name: "Register ->",
           route: {
-            name: "Register",
+            name: "SignIn",
           },
         },
       ],
