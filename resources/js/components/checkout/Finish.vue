@@ -16,11 +16,14 @@
       return {
         title: "Đặt tour thành công",
         description: `Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi. 
-          Mọi thắc mắc xin vui lòng liên hệ info@travelbot.com hoặc +84 0101 2345.
+          Mọi thắc mắc xin vui lòng liên hệ info@travel.com hoặc 033 706 7403.
           Xin cảm ơn!`
       };
     }
   };
 </script>
-
-<style></style>
+<style lang="less" scoped>
+.ant-btn-primary{
+  background-color: #6078AB !important;
+}
+</style>

@@ -40,7 +40,7 @@
           </a-form-item>
           <a-form-item>
             <a-button @click="$emit('prevToContact')" :style="{ marginRight: '8px' }">Trước</a-button>
-            <a-button type="primary" @click="nextToPayment">Thanh toán</a-button>
+            <a-button @click="nextToPayment">Thanh toán</a-button>
           </a-form-item>
         </a-col>
       </a-row>
@@ -80,4 +80,8 @@
   };
 </script>
 
-<style></style>
+<style scoped>
+.ant-btn{
+   background-color: #7f91b9 !important;
+   color: #fff
+}</style>

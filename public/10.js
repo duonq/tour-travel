@@ -237,6 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
  // import ModalFeedback from "@/components/modal/Feedback";
 // import HeaderNotification from "./shared/HeaderNotification";
 
@@ -837,7 +838,7 @@ var render = function() {
                           }
                         },
                         [
-                          _vm.$auth.isOwner || _vm.$auth.isAdmin
+                          _vm.$auth.isAdmin
                             ? _c(
                                 "a-button",
                                 {

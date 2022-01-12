@@ -54,7 +54,6 @@
       </a-form-item>
       <a-form-item :wrapperCol="{ span: 18, offset: 6 }">
         <a-button
-          type="primary"
           @click="nextToAccept"
           >Xác nhận</a-button
         >
@@ -126,4 +125,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="less" scoped>
+.ant-btn{
+   background-color: #7f91b9 !important;
+   color: #fff
+}
+</style>

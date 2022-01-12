@@ -44,7 +44,8 @@
               <a-button @click="$router.push({ name: 'login' })">Đăng nhập</a-button>
             </div>
             <div v-else :style="{ display: 'flex', flexDirection: 'row', alignItems: 'center' }">
-              <a-button style="marginRight:24px" v-if="$auth.isOwner || $auth.isAdmin" @click="$router.push({ name: pageManager })">
+              <a-button style="marginRight:24px" v-if="$auth.isAdmin" @click="$router.push({ name: pageManager })">
+                <!-- $auth.isOwner ||  -->
                 Quản trị
               </a-button>
 

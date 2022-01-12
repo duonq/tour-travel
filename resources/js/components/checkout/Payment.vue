@@ -10,7 +10,7 @@
           <a-select-option v-for="payment in payments" :key="payment.id" :value="payment.id">{{ payment.payment_method }}</a-select-option>
         </a-select>
       </a-form-item>
-      <a-form-item v-if="paymentSelected === 2">
+      <!-- <a-form-item v-if="paymentSelected === 2">
         <h3>Thanh toán online VNPay</h3>
         <description-item title="Số tiền thanh toán" :content="orderInfo.total_amount | currencyVN" />
         <div v-if="!isPaid" @click="vnpay" style="cursor: pointer;">
@@ -25,10 +25,10 @@
             <a-alert message="Thanh toán thất bại" type="error" showIcon closable />
           </div>
         </div>
-      </a-form-item>
+      </a-form-item> -->
       <a-form-item :wrapperCol="{ span: 16, offset: 8 }">
         <a-button @click="$emit('prevToAccept')" style="margin-right: 8px;">Trước</a-button>
-        <a-button type="primary" :loading="isLoading" :disabled="disabledFinishButton" @click="finishOrder">Hoàn thành</a-button>
+        <a-button :loading="isLoading" :disabled="disabledFinishButton" @click="finishOrder">Hoàn thành</a-button>
       </a-form-item>
     </a-form>
   </div>
@@ -103,4 +103,8 @@
     margin: 12px 12px 12px 0;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
   }
+  .ant-btn{
+   background-color: #7f91b9 !important;
+   color: #fff
+}
 </style>
